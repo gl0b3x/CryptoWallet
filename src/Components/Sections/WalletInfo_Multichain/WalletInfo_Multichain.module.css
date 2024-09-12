@@ -1,0 +1,190 @@
+.MultiChainWrapper {
+  background-color: rgb(var(--background));
+  color: rgb(var(--textColor));
+}
+
+.Article {
+  padding: 3vh 0;
+  margin: 0;
+  text-align: center;
+  font-size: clamp(
+    var(--min-article-size),
+    var(--preferred-article-size),
+    var(--max-article-size)
+  );
+  font-weight: 700;
+}
+
+.Article b {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--accentColor), 1) 0%,
+    rgba(var(--purpleColor), 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 5px;
+}
+
+.multiChainContent {
+  background-color: rgba(var(--accentColor), 0.05);
+  border: 1px solid rgba(var(--accentColor), 0.1);
+  border-radius: 14px;
+  padding: 2vh 3vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.textContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentArticle {
+  font-size: calc(
+    clamp(
+        var(--min-text-size),
+        var(--preferred-text-size),
+        var(--max-text-size)
+      ) + 6px
+  );
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.advantagesWallet {
+  padding: 0 25px;
+}
+
+.advantagesWallet li {
+  font-size: clamp(
+    var(--min-text-size),
+    var(--preferred-text-size),
+    var(--max-text-size)
+  );
+  padding: 7px 0;
+  color: rgb(var(--accentColor));
+}
+
+.advantagesWallet span {
+  color: rgb(var(--textColor));
+}
+
+.imageMultiChain {
+  width: 45%;
+  height: 70%;
+}
+
+.imageMultiChain img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .MultiChainWrapper {
+    padding: 2vh 10vw 5vh;
+  }
+  .contentArticle {
+    text-align: center;
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 4px
+    );
+  }
+  .multiChainContent {
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    padding: 3vh 5vw;
+  }
+  .textContent {
+    width: 100%;
+  }
+  .imageMultiChain {
+    width: 100%;
+  }
+  .advantagesWallet li {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 3px
+    );
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  .MultiChainWrapper {
+    padding: 2vh 5vw 5vh;
+  }
+  .multiChainContent {
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    padding: 5vh 5vw;
+  }
+  .textContent {
+    width: 100%;
+  }
+  .imageMultiChain {
+    width: 100%;
+  }
+  .advantagesWallet li {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 3px
+    );
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .MultiChainWrapper {
+    padding: 2vh 10vw 5vh;
+  }
+  .multiChainContent {
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    padding: 5vh 5vw;
+  }
+  .textContent {
+    width: 100%;
+  }
+  .imageMultiChain {
+    width: 100%;
+  }
+  .advantagesWallet li {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 5px
+    );
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .MultiChainWrapper {
+    padding: 2vh 10vw 5vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .MultiChainWrapper {
+    padding: 2vh 15vw 5vh;
+  }
+}

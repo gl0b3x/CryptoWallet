@@ -1,0 +1,154 @@
+.walletDetailWrapper {
+  background-color: rgb(var(--background));
+  color: rgb(var(--textColor));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.detailItem {
+  background: rgba(var(--accentColor), 0.05);
+  border: 1px solid rgba(var(--accentColor), 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.textDetail {
+  padding: 7% 10%;
+}
+
+.Article {
+  font-size: calc(
+    clamp(
+        var(--min-text-size),
+        var(--preferred-text-size),
+        var(--max-text-size)
+      ) + 6px
+  );
+  font-weight: 700;
+  margin: 0;
+  padding: 5px 0;
+  height: 40%;
+}
+
+.describeText {
+  margin: 0;
+  padding: 5px 0;
+  font-size: clamp(
+    var(--min-text-size),
+    var(--preferred-text-size),
+    var(--max-text-size)
+  );
+  height: fit-content;
+  line-height: 1.5;
+}
+
+.imageDetail {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageDetail img {
+  width: 80%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .walletDetailWrapper {
+    padding: 5vh 5vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  .describeText {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 3px
+    );
+  }
+  .textDetail {
+    height: 75%;
+    padding: 7%;
+  }
+  .imageDetail {
+    height: 25%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  .walletDetailWrapper {
+    padding: 5vh 5vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  .describeText {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 3px
+    );
+  }
+  .textDetail {
+    height: 65%;
+  }
+  .imageDetail {
+    height: 35%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .walletDetailWrapper {
+    padding: 5vh 10vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .describeText {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 5px
+    );
+  }
+  .textDetail {
+    height: 65%;
+  }
+  .imageDetail {
+    height: 35%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .walletDetailWrapper {
+    padding: 5vh 10vw;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .textDetail {
+    height: 65%;
+  }
+  .imageDetail {
+    height: 35%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .walletDetailWrapper {
+    padding: 5vh 15vw;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .textDetail {
+    height: 65%;
+  }
+  .imageDetail {
+    height: 35%;
+  }
+}

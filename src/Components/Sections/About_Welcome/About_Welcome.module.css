@@ -1,0 +1,143 @@
+.WelcomeWrapper {
+  background-color: rgba(var(--background));
+  color: rgb(var(--textColor));
+  display: flex;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.textWrapper {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  gap: 25px;
+}
+
+.article {
+  font-size: clamp(
+    var(--min-article-size),
+    var(--preferred-article-size),
+    var(--max-article-size)
+  );
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 0;
+}
+
+.article span {
+  background: linear-gradient(
+    90deg,
+    rgb(var(--accentColor)) 0%,
+    rgb(var(--purpleColor)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.text {
+  font-size: clamp(
+    var(--min-text-size),
+    var(--preferred-text-size),
+    var(--max-text-size)
+  );
+  line-height: 1.5;
+}
+
+.imageArticle {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageArticle img {
+  width: 80%;
+  filter: drop-shadow(0 0 50px rgba(var(--accentColor), 0.5));
+}
+
+@media (max-width: 479px) {
+  .WelcomeWrapper {
+    padding: 5vh 5vw;
+    flex-direction: column;
+    height: 100%;
+  }
+  .textWrapper {
+    width: 100%;
+  }
+  .text {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 2px
+    );
+  }
+  .imageArticle {
+    width: 100%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .WelcomeWrapper {
+    padding: 5vh 5vw;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .textWrapper {
+    width: 100%;
+  }
+  .text {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 2px
+    );
+  }
+  .imageArticle {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .WelcomeWrapper {
+    padding: 5vh 10vw;
+    flex-direction: column;
+    height: 100%;
+  }
+  .textWrapper {
+    width: 100%;
+  }
+  .text {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 3px
+    );
+  }
+  .imageArticle {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .WelcomeWrapper {
+    padding: 0 10vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .WelcomeWrapper {
+    padding: 0 15vw;
+  }
+}

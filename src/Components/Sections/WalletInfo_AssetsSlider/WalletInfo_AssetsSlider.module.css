@@ -1,0 +1,166 @@
+.walletAssetsSlider {
+  background-color: rgba(var(--background));
+  color: rgb(var(--textColor));
+}
+
+.article {
+  padding: 3vh 0;
+  margin: 0;
+  text-align: center;
+  font-size: clamp(
+    var(--min-article-size),
+    var(--preferred-article-size),
+    var(--max-article-size)
+  );
+  font-weight: 700;
+}
+
+.article span {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--accentColor), 1) 0%,
+    rgba(var(--purpleColor), 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 5px;
+}
+
+.swiperAssets {
+  margin-top: 25px;
+}
+
+.swipers {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.swipers::before,
+.swipers::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.swipers::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(var(--background), 1) 0%,
+    rgba(var(--background), 0.9) 15%,
+    rgba(var(--background), 0.5) 50%,
+    rgba(var(--background), 0) 100%
+  );
+}
+
+.swipers::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(var(--background), 1) 0%,
+    rgba(var(--background), 0.9) 15%,
+    rgba(var(--background), 0.5) 50%,
+    rgba(var(--background), 0) 100%
+  );
+}
+
+.slideSwiper {
+  height: 100px;
+  border-radius: 21px;
+  background-color: rgba(var(--accentColor), 0.1);
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.assetImage {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.assetImage img {
+  height: 100%;
+}
+
+.assetName {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.assetId {
+  opacity: 0.7;
+  text-transform: capitalize;
+  font-size: calc(
+    clamp(
+        var(--min-header-size),
+        var(--preferred-header-size),
+        var(--max-header-size)
+      ) - 2px
+  );
+}
+
+.assetSymbol {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: clamp(
+    var(--min-text-size),
+    var(--preferred-text-size),
+    var(--max-text-size)
+  );
+}
+
+@media (max-width: 600px) {
+  .walletAssetsSlider {
+    padding: 2vh 5vw 5vh;
+  }
+  .slideSwiper {
+    height: 75px;
+  }
+  .assetImage {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  .walletAssetsSlider {
+    padding: 2vh 5vw 5vh;
+  }
+  .assetImage {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .walletAssetsSlider {
+    padding: 2vh 10vw 5vh;
+  }
+  .assetImage {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .walletAssetsSlider {
+    padding: 2vh 10vw 5vh;
+  }
+  .assetImage {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .walletAssetsSlider {
+    padding: 2vh 15vw 5vh;
+  }
+}

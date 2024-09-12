@@ -1,0 +1,233 @@
+.mainWrapper {
+  height: 90vh;
+  background-color: var(--background);
+  color: rgb(var(--textColor));
+  font-size: clamp(
+    var(--min-text-size),
+    var(--preferred-text-size),
+    var(--max-text-size)
+  );
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.leftSection {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nameWallet {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages {
+  font-size: clamp(
+    var(--min-article-size),
+    var(--preferred-article-size),
+    var(--max-article-size)
+  );
+  font-weight: 700;
+}
+
+.advantages span {
+  background: linear-gradient(
+    90deg,
+    rgb(var(--accentColor)) 0%,
+    rgb(var(--purpleColor)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+}
+
+.Article {
+  font-size: clamp(
+    var(--min-article-size),
+    var(--preferred-article-size),
+    var(--max-article-size)
+  );
+  background: linear-gradient(
+    90deg,
+    rgb(var(--accentColor)) 0%,
+    rgb(var(--purpleColor)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
+
+.aboutText p {
+  font-size: clamp(
+    var(--min-text-size),
+    var(--preferred-text-size),
+    var(--max-text-size)
+  );
+  line-height: 1.5;
+}
+
+.aboutText p span {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--accentColor), 1) 0%,
+    rgba(var(--purpleColor), 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.rightSection {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photoCards {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 479px) {
+  .advantages,
+  .Article {
+    text-align: center;
+    line-height: 1.5;
+  }
+  .aboutText p {
+    text-align: left;
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 5px
+    );
+  }
+  .mainWrapper {
+    padding: 5vh 5vw;
+    height: 100vh;
+  }
+  .leftSection {
+    width: 100%;
+  }
+  .rightSection {
+    width: 100%;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Article {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .mainWrapper {
+    padding: 5vh 5vw;
+    height: 75vh;
+  }
+  .leftSection {
+    width: 100%;
+    height: 100%;
+  }
+  .rightSection {
+    width: 100%;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .advantages,
+  .Article {
+    text-align: center;
+    line-height: 1.5;
+  }
+  .aboutText p {
+    text-align: left;
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 5px
+    );
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mainWrapper {
+    padding: 7vh 10vw;
+    height: 100%;
+  }
+  .leftSection {
+    width: 100%;
+  }
+  .rightSection {
+    width: 100%;
+  }
+  .aboutText p {
+    font-size: calc(
+      clamp(
+          var(--min-text-size),
+          var(--preferred-text-size),
+          var(--max-text-size)
+        ) + 3px
+    );
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mainWrapper {
+    padding: 0 10vw;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .mainWrapper {
+    padding: 0 10vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mainWrapper {
+    padding: 0 15vw;
+  }
+}
