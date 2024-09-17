@@ -22,7 +22,7 @@ const Card_Preview = () => {
           transition={{ duration: 2 }}
           className={classes.textBlock}
         >
-          <div className={classes.articleBlock}>
+          <div>
             <p className={classes.article}>
               <span>NexGen</span> Wallet
             </p>

@@ -2,13 +2,13 @@
   background-color: rgb(var(--background));
   color: rgb(var(--textColor));
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .generalBlock {
   display: flex;
   height: 85%;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .textBlock {
@@ -19,9 +19,6 @@
   align-items: start;
   justify-content: center;
   gap: 25px;
-}
-
-.articleBlock {
 }
 
 .article {
